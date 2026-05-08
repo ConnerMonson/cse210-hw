@@ -12,7 +12,7 @@ class Program
 
         while (userGuess != number)
         {
-            Console.WriteLine("Make your Guess: ");
+            Console.Write("Make your Guess: ");
             userGuess = int.Parse(Console.ReadLine());
 
             if (userGuess < number)

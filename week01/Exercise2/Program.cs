@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("What is your grade? ");
+        Console.Write("What is your grade? ");
         string userGrade = Console.ReadLine();
         int grade = int.Parse(userGrade);
 

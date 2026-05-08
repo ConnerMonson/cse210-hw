@@ -33,7 +33,7 @@ class Program
         }
 
         int count = numbers.Count;
-        int average = sum / count;
+        float average = ((float)sum) / count;
 
 
 
