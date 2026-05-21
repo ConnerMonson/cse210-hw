@@ -1,3 +1,5 @@
+// I added a random number generator to choose how many words hide that loop.
+
 class Program
 {
     static void Main()
@@ -15,6 +17,7 @@ class Program
         Console.Clear();
         Console.WriteLine($"{reference.GetDisplayText()} {text}");
 
+        Random random = new Random();
         string userInput = "";
         while (userInput != "quit")
         {
@@ -24,9 +27,13 @@ class Program
             // if enter, then remove random words, and reset//
             if (userInput == "" && scripture.IsCompletelyHidden() == false)
             {
-                scripture.HideRandomWords(3);
+                // Random number of words to hide 
+                int numberToHide = random.Next(2, 5);
+                scripture.HideRandomWords(numberToHide);
+
                 // Clear console
                 Console.Clear();
+
                 // Display updated reference + scripture
                 Console.WriteLine(scripture.GetDisplayText());
             }
