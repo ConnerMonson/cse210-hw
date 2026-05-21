@@ -15,10 +15,6 @@ class Word
     {
         _isHidden = true;
     }
-    public void Show()
-    {
-        
-    }
     public bool IsHidden()
     {
         return _isHidden;

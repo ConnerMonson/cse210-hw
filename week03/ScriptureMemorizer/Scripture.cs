@@ -26,7 +26,13 @@ class Scripture
     }
     public string GetDisplayText()
     {
-        return "";
+        string scriptureText = _reference.GetDisplayText() + " ";
+
+        foreach (Word word in _words)
+        {
+            scriptureText += word.GetDisplayText() + " ";
+        }
+        return scriptureText;
     }
     public bool IsCompletelyHidden()
     {
