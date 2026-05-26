@@ -31,10 +31,14 @@ class Program
     order2.AddProduct(product4);
     order2.AddProduct(product5);
     order2.AddProduct(product1);
+    
+    // clear console
+    Console.Clear();
+
     // display order info
     Console.WriteLine("Order 1\n");
     Console.WriteLine($"Packing Label: \n{order1.PackingLable()}\nShipping Label: \n{order1.ShippingLable()}\n\nTotal Price: ${order1.TotalCost()}");
-    Console.WriteLine("Order 2\n");
+    Console.WriteLine("\nOrder 2\n");
      Console.WriteLine($"Packing Label: \n{order2.PackingLable()}\nShipping Label: \n{order2.ShippingLable()}\n\nTotal Price: ${order2.TotalCost()}");
     }
 }

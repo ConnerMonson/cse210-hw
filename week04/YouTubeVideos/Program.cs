@@ -26,6 +26,9 @@ class Program
         videos.Add(video2);
         videos.Add(video3);
 
+
+        // clear console
+        Console.Clear();
         // loop through videos and display info
         foreach (Video video in videos)
         {
