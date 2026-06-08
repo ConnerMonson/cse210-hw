@@ -1,9 +1,12 @@
+// I added a counter that counts how many activities were completed
+
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
+        int sessionsCompleted = 0;
         string userInput = "0";
 
         while (userInput != "4")
@@ -16,20 +19,24 @@ class Program
             Console.WriteLine("  3. Start listing activity");
             Console.WriteLine("  4. quit");
             Console.Write("Select a choice from the menu: ");
+
             userInput = Console.ReadLine();
             if (userInput == "1")
             {
             new BreathingActivity().Run();
+            sessionsCompleted++;
             }
             else if (userInput == "2")
             {
             new ReflectingActivity().Run();
-
+            sessionsCompleted++;
             }
             else if (userInput == "3")
             {
             new ListingActivity().Run();
+            sessionsCompleted++;
             }
         }
+        Console.WriteLine($"You Completed {sessionsCompleted} mindfulness activities today!");
     }
 }
