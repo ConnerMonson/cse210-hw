@@ -1,3 +1,4 @@
+using System.IO;
 class GoalManager
 {
     private List<Goal> _goals;
@@ -130,6 +131,11 @@ class GoalManager
         _score += earnedPoints;
 
         Console.WriteLine($"You earned {earnedPoints} points!");
+
+        if (earnedPoints > 0)
+        {
+            ShowGoalCompletion();
+        }
     }
     public void SaveGoals()
     {
@@ -190,5 +196,24 @@ class GoalManager
                 _goals.Add(new ChecklistGoal(name, description, points, target, bonus, completed));
             }
         }
+    }
+    public void ShowGoalCompletion()
+    {
+        Console.Clear();
+
+        Console.WriteLine(@"
+88                                                                     
+88                                                                     
+88                                                                     
+88,dPPYba,   ,adPPYba,   ,adPPYba,  8b,dPPYba, ,adPPYYba, 8b       d8  
+88P'    ''8a a8     '8a a8'     '8a 88P'   'Y8 ""     `Y8 `8b     d8'  
+88       88 8b       d8 8b       d8 88         ,adPPPPP88  `8b   d8'   
+88       88 '8a,   ,a8' :8a,   ,a8: 88         88,    ,88   `8b,d8'    
+88       88  `\YbbdP/'   `:YbbdPI'  88         ``8bbdP'Y8     Y88'     
+                                                              d8'      
+                                                             d8'       
+               ");
+        Thread.Sleep(5000);
+        Console.Clear();
     }
 }
