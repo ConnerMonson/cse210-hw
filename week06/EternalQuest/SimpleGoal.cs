@@ -7,7 +7,7 @@ class SimpleGoal: Goal
     public SimpleGoal(string name, string description, int points, bool isComplete = false)
     :base(name, description, points)
     {
-        _isComplete = false;
+        _isComplete = isComplete;
     }
 
     public override int RecordEvent()
@@ -36,6 +36,6 @@ class SimpleGoal: Goal
     }
     public override string GetStringRepresentation()
     {
-        return $"SimpleGoal|{GetName()}|{_isComplete}";
+        return $"SimpleGoal|{GetName()}|{GetDescription()}|{GetPoints()}|{_isComplete}";
     }
 }

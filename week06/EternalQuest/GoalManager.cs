@@ -63,10 +63,11 @@ class GoalManager
     }
     public void DisplayPlayerInfo()
     {
-        Console.WriteLine($"\nYou have {_score} amount of points!.\n");
+        Console.WriteLine($"\nYou have {_score} points!\n");
     }
     public void ListGoalNames()
     {
+        Console.WriteLine("The goals are: ");
         for (int i = 0; i < _goals.Count; i++)
         {
             Console.WriteLine($"{i + 1}. {_goals[i].GetName()}");
@@ -81,7 +82,7 @@ class GoalManager
     }
     public void CreateGoal()
     {
-        Console.WriteLine("The types of Goals are:?");
+        Console.WriteLine("The types of Goals are:");
         Console.WriteLine("1. Simple Goal");
         Console.WriteLine("2. Eternal Goal");
         Console.WriteLine("3. Checklist Goal");

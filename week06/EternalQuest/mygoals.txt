@@ -1,0 +1,4 @@
+4150
+SimpleGoal|temple|50|True
+EternalGoal|grow 2 inches
+ChecklistGoal|fly|flap my wings hard enough so that I fly|500|4|2000|4

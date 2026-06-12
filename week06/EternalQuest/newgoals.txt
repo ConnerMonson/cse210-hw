@@ -1,0 +1,4 @@
+100
+SimpleGoal|run|run to the moon|50|True
+EternalGoal|best|be the greates ever|50
+ChecklistGoal|fly|fly everyday by flapping my arms|50|5|400|1

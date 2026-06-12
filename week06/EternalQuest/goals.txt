@@ -1,0 +1,4 @@
+450
+SimpleGoal|run to the moon|True
+EternalGoal|run
+ChecklistGoal|temple|go to the temple 2x a wee|50|200|5|0
